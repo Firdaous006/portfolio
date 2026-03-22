@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio — Firdaous Amadou · BTS SIO SISR" />
+  <title>Firdaous Amadou · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <canvas id="techCanvas" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- HEADER -->
+  <header class="top" id="top">
+    <div class="container top__inner">
+     <a class="brand" href="#hero" aria-label="Retour au hero">
+       <span class="brand__name">Firdaous Amadou</span>
+     </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Menu</span>
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link" href="#about">À propos</a></li>
+          <li><a class="nav__link" href="#skills">Compétences</a></li>
+          <li><a class="nav__link" href="#projects">Projets</a></li>
+          <li><a class="nav__link" href="#experience">Expérience</a></li>
+          <li class="nav__cta-wrap"><a class="nav__cta" href="#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+
+        <div class="hero__text">
+          <div class="terminal-badge">
+            <span class="tb-dot tb-dot--r"></span>
+            <span class="tb-dot tb-dot--y"></span>
+            <span class="tb-dot tb-dot--g"></span>
+            <code>$ status --open --stage/alternance</code>
+          </div>
+          <h1 class="hero__title">
+            <span id="typedName"></span><span class="cursor" aria-hidden="true">|</span>
+          </h1>
+          <p class="hero__role">Admin Sys &amp; Réseau · BTS SIO SISR</p>
+          <p class="hero__desc">En recherche de stage ou alternance en support, infrastructure, systèmes et réseaux.</p>
+          <div class="hero__actions">
+            <a class="btn btn--fill" href="#projects">Voir mes projets</a>
+            <button class="btn btn--outline" id="openCvBtn" type="button">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              CV PDF
+            </button>
+          </div>
+          
+        </div>
+
+        <div class="hero__card">
+          <div class="card-corner card-corner--tl" aria-hidden="true"></div>
+          <div class="card-corner card-corner--br" aria-hidden="true"></div>
+          <div class="photo-wrap">
+            <img src="photos/photo2.png" alt="Photo de Firdaous Amadou" class="photo-img"
+              onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';" />
+            <div class="photo-fallback" id="photoFallback">FA</div>
+            <div class="scan-line" aria-hidden="true"></div>
+          </div>
+         
+        </div>
+
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="sec-head reveal"><h2>À propos</h2><span class="sec-line"></span></div>
+        <div class="about-grid">
+          <div class="glass-card reveal">
+            <div class="card-icon">🎯</div>
+            <h3>Profil</h3>
+            <p>Étudiant en BTS SIO à l'EFREI Paris, passionné par les réseaux et les infrastructures informatiques, avec un fort intérêt pour l'administration et la configuration des systèmes.</p>
+          </div>
+          <div class="glass-card reveal">
+            <div class="card-icon">⚡</div>
+            <h3>Ma valeur ajoutée</h3>
+            <p>Je documente, je teste, je sécurise.</p>
+            <div class="chip-row">
+              <span class="chip">Rigueur</span>
+              <span class="chip">Autonomie</span>
+              <span class="chip">Esprit d'équipe</span>
+              <span class="chip">Communication</span>
+              <span class="chip">Sens du service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- COMPÉTENCES -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="sec-head reveal"><h2>Compétences</h2><span class="sec-line"></span></div>
+    <div class="skills-grid">
+
+      <article class="skill-card reveal">
+        <div class="skill-icon">🗂</div>
+        <h3>Gérer le patrimoine informatique</h3>
+        <button class="skill-toggle" type="button" aria-expanded="false">En savoir plus <span class="skill-arrow">›</span></button>
+        <div class="skill-details" hidden>
+          <ul class="skill-detail-list">
+            <li>Recenser et identifier les ressources numériques</li>
+            <li>Exploiter des référentiels, normes et standards</li>
+            <li>Mettre en place et vérifier les niveaux d'habilitation</li>
+            <li>Vérifier les conditions de continuité d'un service</li>
+            <li>Gérer des sauvegardes</li>
+            <li>Vérifier le respect des règles d'utilisation des ressources</li>
+          </ul>
+          <div class="skill-tools">
+            <span class="skill-tools__label">Outils</span>
+            <div class="skill-tools__list">
+              <span>Active Directory</span><span>VirtualBox</span><span>Excel</span><span>OCS Inventory</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon">🎫</div>
+        <h3>Répondre aux incidents et demandes</h3>
+        <button class="skill-toggle" type="button" aria-expanded="false">En savoir plus <span class="skill-arrow">›</span></button>
+        <div class="skill-details" hidden>
+          <ul class="skill-detail-list">
+            <li>Collecter, suivre et orienter des demandes</li>
+            <li>Traiter les demandes réseau et système (SISR)</li>
+            <li>Traiter les demandes applicatives (SLAM)</li>
+          </ul>
+          <div class="skill-tools">
+            <span class="skill-tools__label">Outils</span>
+            <div class="skill-tools__list">
+              <span>GLPI</span><span>ping / traceroute</span><span>nslookup</span><span>Remote Desktop</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon">🌐</div>
+        <h3>Développer la présence en ligne</h3>
+        <button class="skill-toggle" type="button" aria-expanded="false">En savoir plus <span class="skill-arrow">›</span></button>
+        <div class="skill-details" hidden>
+          <ul class="skill-detail-list">
+            <li>Valoriser l'image de l'organisation sur les médias numériques</li>
+            <li>Référencer les services en ligne et mesurer leur visibilité</li>
+            <li>Participer à l'évolution d'un site Web</li>
+          </ul>
+          <div class="skill-tools">
+            <span class="skill-tools__label">Outils</span>
+            <div class="skill-tools__list">
+              <span>HTML / CSS / JS</span><span>PHP</span><span>MySQL</span><span>VS Code</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon">📋</div>
+        <h3>Travailler en mode projet</h3>
+        <button class="skill-toggle" type="button" aria-expanded="false">En savoir plus <span class="skill-arrow">›</span></button>
+        <div class="skill-details" hidden>
+          <ul class="skill-detail-list">
+            <li>Analyser les objectifs et modalités d'organisation d'un projet</li>
+            <li>Planifier les activités</li>
+            <li>Évaluer les indicateurs de suivi et analyser les écarts</li>
+          </ul>
+          <div class="skill-tools">
+            <span class="skill-tools__label">Outils</span>
+            <div class="skill-tools__list">
+              <span>Git / GitHub</span><span>Trello</span><span>Draw.io</span><span>Word / Docs</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon">⚙️</div>
+        <h3>Mettre à disposition des services IT</h3>
+        <button class="skill-toggle" type="button" aria-expanded="false">En savoir plus <span class="skill-arrow">›</span></button>
+        <div class="skill-details" hidden>
+          <ul class="skill-detail-list">
+            <li>Réaliser les tests d'intégration et d'acceptation d'un service</li>
+            <li>Déployer un service</li>
+            <li>Accompagner les utilisateurs dans la mise en place d'un service</li>
+          </ul>
+          <div class="skill-tools">
+            <span class="skill-tools__label">Outils</span>
+            <div class="skill-tools__list">
+              <span>Windows Server</span><span>Debian / Ubuntu</span><span>VirtualBox</span><span>Cisco Packet Tracer</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <div class="skill-icon">📈</div>
+        <h3>Organiser son développement pro</h3>
+        <button class="skill-toggle" type="button" aria-expanded="false">En savoir plus <span class="skill-arrow">›</span></button>
+        <div class="skill-details" hidden>
+          <ul class="skill-detail-list">
+            <li>Mettre en place son environnement d'apprentissage personnel</li>
+            <li>Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+            <li>Gérer son identité professionnelle</li>
+            <li>Développer son projet professionnel</li>
+          </ul>
+          <div class="skill-tools">
+            <span class="skill-tools__label">Outils</span>
+            <div class="skill-tools__list">
+              <span>PowerShell</span><span>Bash</span><span>Feedly</span><span>Notion</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Tableau récapitulatif -->
+    <div class="container">
+      <div class="skills-recap reveal">
+        <div class="skills-recap__left">
+          <div class="skills-recap__icon">📊</div>
+          <div>
+            <h3 class="skills-recap__title">Tableau récapitulatif de mes réalisations</h3>
+            <p class="skills-recap__sub">Synthèse complète de mes activités réalisées en formation et en entreprise — compétences, projets, outils.</p>
+          </div>
+        </div>
+        <a class="btn btn--fill skills-recap__btn"
+           href="https://1drv.ms/x/c/f49a1ffc48240d52/IQBBgY-VfIPzRal7MJnx4R-MARbWbei7hyJTnbysSdMkYxg?e=GQzR2s"
+           target="_blank" rel="noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          Consulter le tableau
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <!-- PROJETS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="sec-head reveal"><h2>Projets</h2><span class="sec-line"></span></div>
+
+        <!-- 🖥 Admin Sys & Réseau -->
+        <div class="proj-category">
+          <div class="proj-category__head">
+            <span class="proj-category__icon">🖥</span>
+            <span class="proj-category__label">Admin Sys &amp; Réseau</span>
+          </div>
+          <div class="projects-grid">
+
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <span class="project-pill">SISR</span>
+                <span class="proj-sub">Active Directory</span>
+              </div>
+              <h3>Sauvegarde &amp; Restauration AD</h3>
+              <p class="proj-intro">Mise en place et gestion de la sauvegarde Active Directory, des bases jusqu'aux scénarios avancés d'incidents.</p>
+              <div class="proj-tabs">
+                <button class="proj-tab is-active" data-tab="ad-1"><span class="proj-tab__dot proj-tab__dot--blue"></span>Bases</button>
+                <button class="proj-tab" data-tab="ad-2"><span class="proj-tab__dot proj-tab__dot--green"></span>Avancé</button>
+              </div>
+              <div class="proj-tab-content" id="ad-1">
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+                <div class="proj-details" hidden>
+                  <ul class="proj-detail-list">
+                    <li>Création d'un domaine Active Directory avec OUs et groupes</li>
+                    <li>Configuration DNS, DHCP et stratégies GPO</li>
+                    <li>Tests de connexion sur VM clientes Windows</li>
+                    <li>Documentation complète avec captures d'écran</li>
+                  </ul>
+                  <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>Windows Server</span><span>AD DS</span><span>DNS</span><span>GPO</span><span>VirtualBox</span></div></div>
+                  <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/Tp sauvegarde AD.pdf" data-title="Sauvegarde AD — Bases"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+                </div>
+              </div>
+              <div class="proj-tab-content" id="ad-2" hidden>
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+                <div class="proj-details" hidden>
+                  <ul class="proj-detail-list">
+                    <li>Arborescence de partages (Direction, RH, Production)</li>
+                    <li>Sauvegarde planifiée quotidienne (données uniquement)</li>
+                    <li>Restauration ciblée après erreur humaine</li>
+                    <li>Simulation de perte totale avec conservation des droits</li>
+                    <li>Analyse : disque interne vs NAS vs externe</li>
+                  </ul>
+                  <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>Windows Server</span><span>Active Directory</span><span>Sauvegarde Windows</span><span>VirtualBox</span></div></div>
+                  <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/Tp avance Ad.pdf" data-title="Sauvegarde AD — Avancé"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <span class="project-pill">SISR</span>
+                <span class="proj-sub">Cisco / Réseau</span>
+              </div>
+              <h3>Cisco Packet Tracer</h3>
+              <p class="proj-intro">Mise en place d'une infrastructure réseau avec VLANs, routage inter-VLAN et DHCP configurés en CLI sur routeur et switchs Cisco.</p>
+              <div class="proj-tabs">
+                <button class="proj-tab is-active" data-tab="cisco-1"><span class="proj-tab__dot proj-tab__dot--blue"></span>Infrastructure 1</button>
+                <button class="proj-tab" data-tab="cisco-2"><span class="proj-tab__dot proj-tab__dot--green"></span>Infrastructure 2</button>
+              </div>
+              <div class="proj-tab-content" id="cisco-1">
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+<div class="proj-details" hidden>
+  <ul class="proj-detail-list">
+    <li>1 Routeur, 2 Switchs, 6 PC — deux infrastructures sur un même routeur</li>
+    <li>VLAN 100 (SISR) et VLAN 200 (SLAM) créés sur Switch0 et Switch1</li>
+    <li>Infra 1 — Switch0 : PC0/PC1 → VLAN 100 · PC2/PC3 → VLAN 200</li>
+    <li>Infra 2 — Switch1 : PC4 → VLAN 100 · PC5 → VLAN 200</li>
+    <li>Liens trunk entre chaque switch et le routeur</li>
+    <li>Router-on-a-Stick sur GE0/0 (Infra 1) et GE0/1 (Infra 2) avec sous-interfaces .10 et .20</li>
+    <li>DHCP configuré sur le routeur pour chaque VLAN — PC obtiennent leur IP automatiquement</li>
+    <li>Routage inter-VLAN désactivé — isolation SISR / SLAM sur les deux infrastructures</li>
+  </ul>
+  <div class="proj-tools">
+    <span class="proj-tools__label">Outils</span>
+    <div class="proj-tools__list">
+      <span>Cisco Packet Tracer</span><span>VLANs</span><span>DHCP</span><span>Router-on-a-Stick</span><span>Trunk</span><span>CLI</span>
+    </div>
+  </div>
+  <button class="btn btn--outline btn--sm" type="button" onclick="openCiscoModal1()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+    </svg>
+    Documentation
+  </button>
+</div>
+              </div>
+              <div class="proj-tab-content" id="cisco-2" hidden>
+  <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+  <div class="proj-details" hidden>
+    <ul class="proj-detail-list">
+      <li>Deux réseaux distincts reliés par un routeur central</li>
+      <li>Réseau gauche — Switch + 2 PC + serveur DNS + DHCP/Routeur (192.168.10.0/24)</li>
+      <li>Réseau droit — Switch + 3 PC + serveur DHCP/DNS (192.168.20.0/24)</li>
+      <li>Routage inter-réseau activé — ping possible dans les deux sens</li>
+      <li>Configuration CLI complète sur chaque équipement</li>
+    </ul>
+    <div class="proj-tools">
+      <span class="proj-tools__label">Outils</span>
+      <div class="proj-tools__list">
+        <span>Cisco Packet Tracer</span><span>DHCP</span><span>DNS</span><span>Routage statique</span><span>CLI</span>
+      </div>
+    </div>
+    <button class="btn btn--outline btn--sm" type="button" onclick="openCiscoModal2()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+      </svg>
+      Documentation
+    </button>
+  </div>
+</div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 🔐 Cybersécurité -->
+        <div class="proj-category">
+          <div class="proj-category__head">
+            <span class="proj-category__icon">🔐</span>
+            <span class="proj-category__label">Cybersécurité</span>
+          </div>
+          <div class="projects-grid">
+
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <span class="project-pill project-pill--secu">Cybersécurité</span>
+                <span class="proj-sub">Linux / Web</span>
+              </div>
+              <h3>Projets Cybersécurité</h3>
+              <p class="proj-intro">Étude des vulnérabilités web et des attaques réseau en environnement virtualisé Linux.</p>
+              <div class="proj-tabs">
+                <button class="proj-tab is-active" data-tab="secu-1"><span class="proj-tab__dot proj-tab__dot--blue"></span>Fil Rouge</button>
+                <button class="proj-tab" data-tab="secu-2"><span class="proj-tab__dot proj-tab__dot--green"></span>MITM</button>
+              </div>
+              <div class="proj-tab-content" id="secu-1">
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+                <div class="proj-details" hidden>
+                  <ul class="proj-detail-list">
+                    <li>Développement d'une application web volontairement vulnérable</li>
+                    <li>Déploiement dans une VM Linux (Apache, PHP, MySQL)</li>
+                    <li>Tests d'attaques : SQLi, XSS, CSRF, MITM</li>
+                    <li>Sécurisation : UFW, HTTPS Certbot, ModSecurity / OWASP CRS</li>
+                    <li>Moindre privilège MySQL et sauvegarde automatique via cron</li>
+                  </ul>
+                  <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>Linux / Debian</span><span>Apache</span><span>PHP</span><span>MySQL</span><span>UFW</span><span>Certbot</span><span>ModSecurity</span></div></div>
+                  <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/Projet_Fil_Rouge.pdf" data-title="Projet Fil Rouge — Cybersécurité"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+                </div>
+              </div>
+              <div class="proj-tab-content" id="secu-2" hidden>
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+                <div class="proj-details" hidden>
+                  <ul class="proj-detail-list">
+                    <li>Déploiement de 3 VMs : Client, Attaquant, Serveur sur réseau privé</li>
+                    <li>Serveur Apache + PHP avec page de connexion vulnérable en HTTP</li>
+                    <li>Configuration IP forwarding sur la machine attaquante</li>
+                    <li>Attaque Man-In-The-Middle via Ettercap (ARP poisoning)</li>
+                    <li>Capture et analyse du trafic réseau — interception des identifiants</li>
+                    <li>Démonstration pourquoi HTTP est vulnérable vs HTTPS</li>
+                  </ul>
+                  <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>VirtualBox</span><span>Linux</span><span>Apache</span><span>Ettercap</span><span>Wireshark</span><span>PHP</span></div></div>
+                  <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/compte_rendu_MITM.pdf" data-title="TP Attaque MITM — Cybersécurité"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 💻 Développement Web -->
+        <div class="proj-category">
+          <div class="proj-category__head">
+            <span class="proj-category__icon">💻</span>
+            <span class="proj-category__label">Développement Web</span>
+          </div>
+          <div class="projects-grid">
+
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <span class="project-pill project-pill--dev">SLAM</span>
+                <span class="proj-sub">Dev Web</span>
+              </div>
+              <h3>Plateforme E-commerce — Entreprise EcoTech</h3>
+              <p class="proj-intro">Conception et développement d'une plateforme e-commerce complète, de l'analyse des besoins au déploiement GitHub.</p>
+              <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+              <div class="proj-details" hidden>
+                <ul class="proj-detail-list">
+                  <li>Analyse des besoins et conception du design avec Figma</li>
+                  <li>Conception de la base de données — MCD et MLD</li>
+                  <li>Développement front-end responsive HTML5 / CSS3 / JavaScript</li>
+                  <li>Traitement des formulaires et logique métier en PHP</li>
+                  <li>10 pages fonctionnelles reliées : catalogue → produit → commande</li>
+                  <li>Versionnage complet sur GitHub avec commits réguliers</li>
+                </ul>
+                <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>SQL</span><span>Figma</span><span>Git / GitHub</span></div></div>
+                <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/ecommerce_wip" data-title="Plateforme E-commerce — En cours"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 🔀 Projets Transversaux -->
+        <div class="proj-category">
+          <div class="proj-category__head">
+            <span class="proj-category__icon">🔀</span>
+            <span class="proj-category__label">Projets Transversaux</span>
+          </div>
+          <div class="projects-grid">
+
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <span class="project-pill project-pill--secu">Cybersécurité</span>
+                <span class="project-pill project-pill--hack" style="margin-left:6px">Support</span>
+                <span class="proj-sub">Support &amp; Pentest</span>
+              </div>
+              <h3>Support &amp; Cybersécurité</h3>
+              <p class="proj-intro">Simulation d'un cycle complet de vie d'une application — déploiement, audit offensif et sécurisation en équipes transversales.</p>
+              <div class="proj-tabs">
+                <button class="proj-tab is-active" data-tab="cyber-sup-1"><span class="proj-tab__dot proj-tab__dot--blue"></span>Infra</button>
+                <button class="proj-tab" data-tab="cyber-sup-2"><span class="proj-tab__dot proj-tab__dot--red"></span>Red Team</button>
+                <button class="proj-tab" data-tab="cyber-sup-3"><span class="proj-tab__dot proj-tab__dot--green"></span>Blue Team</button>
+              </div>
+              <div class="proj-tab-content" id="cyber-sup-1">
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+                <div class="proj-details" hidden>
+                  <ul class="proj-detail-list">
+                    <li>Déploiement de 3 VMs Debian : GLPI, Backend API PHP, Frontend HTML/CSS/JS</li>
+                    <li>Configuration réseau — 3 adresses IP distincts et communication inter-VMs</li>
+                    <li>Installation et configuration de GLPI pour la gestion des incidents</li>
+                    <li>Création des comptes utilisateurs pour la Red Team</li>
+                    <li>Déploiement du Backend (API PHP) et du Frontend depuis GitHub</li>
+                  </ul>
+                  <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>Debian</span><span>GLPI</span><span>Apache</span><span>PHP</span><span>VirtualBox</span><span>GitHub</span></div></div>
+                  <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/infra.pdf" data-title="TP Cyber x Support — Infrastructure"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+                </div>
+              </div>
+              <div class="proj-tab-content" id="cyber-sup-2" hidden>
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+                <div class="proj-details" hidden>
+                  <ul class="proj-detail-list">
+                    <li>Audit de sécurité sur l'infrastructure d'une équipe adverse</li>
+                    <li>Identification de failles : XSS, SQLi, IDOR, DDoS, etc.</li>
+                    <li>Utilisation de Nmap pour la cartographie réseau</li>
+                    <li>Exploitation contrôlée avec Burp Suite</li>
+                    <li>Documentation via tickets GLPI (description, preuve, criticité)</li>
+                  </ul>
+                  <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>Nmap</span><span>Burp Suite</span><span>GLPI</span><span>Linux</span></div></div>
+                  <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/red_team.pdf" data-title="TP Cyber x Support — Red Team"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+                </div>
+              </div>
+              <div class="proj-tab-content" id="cyber-sup-3" hidden>
+                <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+                <div class="proj-details" hidden>
+                  <ul class="proj-detail-list">
+                    <li>Analyse des tickets GLPI remontés par la Red Team</li>
+                    <li>Remédiation des failles identifiées sur l'infrastructure</li>
+                    <li>Sécurisation de l'application et du serveur</li>
+                    <li>Vérification et validation des correctifs appliqués</li>
+                  </ul>
+                  <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>GLPI</span><span>Debian</span><span>Apache</span><span>PHP</span><span>Linux</span></div></div>
+                  <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/blue_team.pdf" data-title="TP Cyber x Support — Blue Team"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <span class="project-pill">SISR</span>
+                <span class="project-pill project-pill--dev" style="margin-left:6px">SLAM</span>
+                <span class="proj-sub">Infra &amp; Dev Web</span>
+              </div>
+              <h3>AP SIO — Koo_2_fourchette</h3>
+              <p class="proj-intro">Mise en place d'une infrastructure d'auto-hébergement et développement d'un site web dynamique de recettes en ligne.</p>
+              <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+              <div class="proj-details" hidden>
+                <ul class="proj-detail-list">
+                  <li>Maquette HTML de la page d'accueil du site Koo_2_fourchette</li>
+                  <li>VirtualBox + NAT — serveur web Apache et base de données MySQL</li>
+                  <li>Activation SSH, redirections de ports (8080→80, 2222→22)</li>
+                  <li>Développement du site dynamique avec CRUD utilisateurs et recettes</li>
+                  <li>Passage NAT → Pont avec IP statique et routage réseau</li>
+                  <li>Serveur FTP de sauvegarde accessible uniquement depuis le serveur web</li>
+                  <li>Versionnage Git, gestion de projet Trello, schéma réseau</li>
+                </ul>
+                <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>VirtualBox</span><span>Apache</span><span>PHP</span><span>MySQL</span><span>SSH</span><span>FTP</span><span>Git</span><span>Trello</span></div></div>
+                <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/AP_SIO_wip" data-title="AP SIO Koo_2_fourchette — En cours"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <span class="project-pill project-pill--hack">Support</span>
+                <span class="proj-sub">BTS SIO</span>
+              </div>
+              <h3>Hackathon — Support &amp; Mise à disposition de services</h3>
+              <p class="proj-intro">Simulation d'entreprise en équipe couvrant l'ensemble des blocs de compétences du référentiel BTS SIO RNCP 40792.</p>
+              <button class="btn btn--outline btn--sm proj-toggle" type="button" aria-expanded="false">En savoir plus <span class="proj-arrow">›</span></button>
+              <div class="proj-details" hidden>
+                <ul class="proj-detail-list">
+                  <li>Recensement des ressources matérielles et logicielles de l'entreprise simulée</li>
+                  <li>Gestion des incidents via GLPI — tickets, priorités, responsables, délais</li>
+                  <li>Déploiement et disponibilité des services sur machines virtuelles</li>
+                  <li>Création d'un site vitrine avec SEO et statistiques de visite</li>
+                  <li>Exploration et documentation de l'API mystère</li>
+                  <li>Planification des tâches SMART en mode projet (Trello / Notion)</li>
+                  <li>Mise en place d'un environnement de veille et d'apprentissage personnel</li>
+                </ul>
+                <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>GLPI</span><span>VirtualBox</span><span>Trello</span><span>HTML/CSS</span><span>API REST</span><span>Notion</span></div></div>
+               <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/Hackathon_wip" data-title="Hackathon BTS SIO — Documentation"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPÉRIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="sec-head reveal"><h2>Expérience</h2><span class="sec-line"></span></div>
+        <div class="timeline">
+
+          <div class="tl-item reveal">
+            <div class="tl-meta"><span class="tl-date">2025 — Aujourd'hui</span></div>
+            <div class="tl-connector"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="glass-card tl-card">
+              <h3>Stage / Alternance </h3>
+              <p>Recherche en cours.</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-meta"><span class="tl-date">2025 — 2026</span></div>
+            <div class="tl-connector"><div class="tl-dot"></div></div>
+            <div class="glass-card tl-card">
+              <h3>BTS SIO · 1ère année</h3>
+              <p>Projets SISR (AD / DNS / GPO / VM) + bases SLAM (web, scripts).</p>
+              <div class="chip-row">
+                <span class="chip">SISR</span><span class="chip">SLAM</span><span class="chip">VirtualBox</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="sec-head reveal"><h2>Contact</h2><span class="sec-line"></span></div>
+        <div class="contact-grid">
+
+          <div class="glass-card contact-form-wrap reveal">
+            <form id="contactForm">
+              <div class="form-row">
+                <label class="form-field">
+                  <span>Nom</span>
+                  <input name="name" type="text" placeholder="Ton nom" autocomplete="name" required />
+                </label>
+                <label class="form-field">
+                  <span>Email</span>
+                  <input name="email" type="email" placeholder="email@exemple.com" autocomplete="email" required />
+                </label>
+              </div>
+              <label class="form-field">
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Bonjour, j'aimerais discuter d'une opportunité..." required></textarea>
+              </label>
+              <div class="form-actions">
+                <button class="btn btn--fill" type="submit" id="submitBtn">Envoyer le message</button>
+                <button class="btn btn--outline" id="copyContactEmail" type="button" data-email="amadoufirdaous69@gmail.com">Copier l'email</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-side">
+            <div class="glass-card contact-info reveal">
+              <h3>Coordonnées</h3>
+              <div class="info-list">
+                <div class="info-item">
+                  <span class="info-label">Email</span>
+                  <a class="info-val" href="https://mail.google.com/mail/?view=cm&to=amadoufirdaous69@gmail.com" target="_blank" rel="noreferrer"><span class="__cf_email__" data-cfemail="63020e02070c16050a1107020c1610555a23040e020a0f4d000c0e"><span class="__cf_email__" data-cfemail="34555955505b41525d4650555b4147020d745359555d581a575b59">amadoufirdaous69@gmail.com</span></span> →</a>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Téléphone</span>
+                  <a class="info-val" href="tel:+33695736989">06 95 73 69 89</a>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">LinkedIn</span>
+                  <a class="info-val" href="https://www.linkedin.com/in/firdaous-amadou-345906388/" target="_blank" rel="noreferrer">Firdaous AMADOU →</a>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">GitHub</span>
+                  <a class="info-val" href="https://github.com/Firdaous006" target="_blank" rel="noreferrer">github.com/Firdaous006 →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Firdaous Amadou</p>
+        <a class="btn--ghost-sm" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Haut</a>
+      </div>
+    </footer>
+    
+
+   <!-- MODALE TP CISCO — Architecture complète -->
+<div id="ciscoModal1" style="display:none;position:fixed;inset:0;z-index:4000;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);overflow-y:auto" onclick="if(event.target===this)closeCiscoModal1()">
+  <div style="max-width:900px;margin:40px auto;background:#0c1120;border:1px solid rgba(59,130,246,0.25);border-radius:16px;overflow:hidden">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#0a0f1e;border-bottom:1px solid rgba(255,255,255,0.07)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#60a5fa">SISR</span>
+        <span style="color:rgba(255,255,255,0.15)">·</span>
+        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;color:#dde4f0;font-weight:600">Cisco Packet Tracer — Contrôle Admin</span>
+      </div>
+      <button onclick="closeCiscoModal1()" style="background:none;border:none;color:#7e90ad;font-size:1.2rem;cursor:pointer;padding:4px 8px">✕</button>
+    </div>
+
+    <div style="padding:32px 28px;display:flex;flex-direction:column;gap:28px">
+
+      <!-- Contexte -->
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#7e90ad;line-height:1.7;margin:0">
+        Un seul routeur relie deux infrastructures partageant les mêmes VLANs.
+        <code style="background:rgba(59,130,246,0.1);padding:2px 6px;border-radius:4px;color:#60a5fa">Infra 1</code> — Switch0 + PC0/PC1/PC2/PC3 sur GE0/0 en Router-on-a-Stick.
+        <code style="background:rgba(16,185,129,0.1);padding:2px 6px;border-radius:4px;color:#10b981">Infra 2</code> — Switch1 + PC4/PC5 sur GE0/1, mêmes VLAN 100 et 200.
+        Inter-VLAN <strong style="color:#f59e0b">désactivé</strong> — SISR et SLAM ne communiquent pas.
+        DHCP géré par le routeur — les mêmes pools servent les deux infrastructures.
+      </p>
+
+      <!-- Topologie -->
+      <div style="background:rgba(8,12,20,.8);border:1px solid rgba(59,130,246,0.15);border-radius:10px;padding:20px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#60a5fa;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Topologie</div>
+        <pre style="margin:0;font-family:'JetBrains Mono',monospace;font-size:.79rem;color:#dde4f0;line-height:2.1">
+  [Switch0]                      [Router0]                    [Switch1]
+  /   |   \   \                  /       \                     /      \
+[PC0][PC1][PC2][PC3]         GE0/0     GE0/1               [PC4]    [PC5]
+VLAN100 VLAN100 VLAN200 VLAN200  |         |              VLAN100  VLAN200
+                             (trunk)   (trunk)
+                      GE0/0.10 → 192.168.10.1  (VLAN 100 — SISR)
+                      GE0/0.20 → 192.168.20.1  (VLAN 200 — SLAM)
+                      GE0/1.10 → 192.168.10.1  (VLAN 100 — SISR)
+                      GE0/1.20 → 192.168.20.1  (VLAN 200 — SLAM)</pre>
+        <div style="margin-top:14px;display:flex;gap:16px;flex-wrap:wrap">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#60a5fa">● VLAN 100 SISR — 192.168.10.0/24 — passerelle 192.168.10.1</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#10b981">● VLAN 200 SLAM — 192.168.20.0/24 — passerelle 192.168.20.1</span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div style="display:flex;gap:8px">
+        <button onclick="showInfra(1)" id="tabInfra1" style="padding:8px 20px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.4);border-radius:8px;color:#60a5fa;font-family:'JetBrains Mono',monospace;font-size:.85rem;cursor:pointer">
+          <span style="width:8px;height:8px;border-radius:50%;background:#3b82f6;display:inline-block;margin-right:6px"></span>Infra 1
+        </button>
+        <button onclick="showInfra(2)" id="tabInfra2" style="padding:8px 20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#7e90ad;font-family:'JetBrains Mono',monospace;font-size:.85rem;cursor:pointer">
+          <span style="width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block;margin-right:6px"></span>Infra 2
+        </button>
+      </div>
+
+      <!-- ═══ INFRA 1 ═══ -->
+      <div id="panelInfra1" style="display:flex;flex-direction:column;gap:16px">
+
+        <!-- Switch0 -->
+        <div style="border:1px solid rgba(59,130,246,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(59,130,246,0.07);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.4);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#60a5fa;flex-shrink:0">1</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Switch0</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">PC0 et PC1 → VLAN 100 (SISR) · PC2 et PC3 → VLAN 200 (SLAM) · Trunk vers Router0.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#10b981">vlan 100</span>
+<span style="color:#60a5fa"> name SISR</span>
+<span style="color:#10b981">exit</span>
+<span style="color:#10b981">vlan 200</span>
+<span style="color:#60a5fa"> name SLAM</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! PC0 et PC1 → VLAN 100</span>
+<span style="color:#10b981">interface range fastEthernet 0/1 - 2</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 100</span>
+
+<span style="color:#4a5a72">! PC2 et PC3 → VLAN 200</span>
+<span style="color:#10b981">interface range fastEthernet 0/3 - 4</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 200</span>
+
+<span style="color:#4a5a72">! Trunk vers Router0</span>
+<span style="color:#10b981">interface gigabitEthernet 0/1</span>
+<span style="color:#60a5fa"> switchport mode trunk</span>
+
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+
+        <!-- Router GE0/0 + DHCP -->
+        <div style="border:1px solid rgba(59,130,246,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(59,130,246,0.07);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.4);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#60a5fa;flex-shrink:0">2</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Router0 — GE0/0 + DHCP</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">Sous-interfaces GE0/0.10 et GE0/0.20 + pools DHCP SISR et SLAM. Ces pools serviront aussi l'Infra 2.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#4a5a72">! Sous-interface VLAN 100 — SISR</span>
+<span style="color:#10b981">interface gigabitEthernet 0/0.10</span>
+<span style="color:#60a5fa"> encapsulation dot1Q 100</span>
+<span style="color:#60a5fa"> ip address 192.168.10.1 255.255.255.0</span>
+<span style="color:#60a5fa"> no shutdown</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! Sous-interface VLAN 200 — SLAM</span>
+<span style="color:#10b981">interface gigabitEthernet 0/0.20</span>
+<span style="color:#60a5fa"> encapsulation dot1Q 200</span>
+<span style="color:#60a5fa"> ip address 192.168.20.1 255.255.255.0</span>
+<span style="color:#60a5fa"> no shutdown</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! Exclure les passerelles</span>
+<span style="color:#10b981">ip dhcp excluded-address 192.168.10.1</span>
+<span style="color:#10b981">ip dhcp excluded-address 192.168.20.1</span>
+
+<span style="color:#4a5a72">! Pool VLAN 100 — SISR</span>
+<span style="color:#10b981">ip dhcp pool SISR</span>
+<span style="color:#60a5fa"> network 192.168.10.0 255.255.255.0</span>
+<span style="color:#60a5fa"> default-router 192.168.10.1</span>
+<span style="color:#60a5fa"> dns-server 8.8.8.8</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! Pool VLAN 200 — SLAM</span>
+<span style="color:#10b981">ip dhcp pool SLAM</span>
+<span style="color:#60a5fa"> network 192.168.20.0 255.255.255.0</span>
+<span style="color:#60a5fa"> default-router 192.168.20.1</span>
+<span style="color:#60a5fa"> dns-server 8.8.8.8</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ INFRA 2 ═══ -->
+      <div id="panelInfra2" style="display:none;flex-direction:column;gap:16px">
+
+        <!-- Switch1 -->
+        <div style="border:1px solid rgba(16,185,129,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(16,185,129,0.06);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.35);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#10b981;flex-shrink:0">1</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Switch1</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">PC4 → VLAN 100 (SISR) · PC5 → VLAN 200 (SLAM) · Trunk vers Router0.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#10b981">vlan 100</span>
+<span style="color:#60a5fa"> name SISR</span>
+<span style="color:#10b981">exit</span>
+<span style="color:#10b981">vlan 200</span>
+<span style="color:#60a5fa"> name SLAM</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! PC4 → VLAN 100</span>
+<span style="color:#10b981">interface fastEthernet 0/1</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 100</span>
+
+<span style="color:#4a5a72">! PC5 → VLAN 200</span>
+<span style="color:#10b981">interface fastEthernet 0/2</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 200</span>
+
+<span style="color:#4a5a72">! Trunk vers Router0</span>
+<span style="color:#10b981">interface gigabitEthernet 0/1</span>
+<span style="color:#60a5fa"> switchport mode trunk</span>
+
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+
+        <!-- Router GE0/1 -->
+        <div style="border:1px solid rgba(16,185,129,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(16,185,129,0.06);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.35);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#10b981;flex-shrink:0">2</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Router0 — GE0/1 (Infra 2)</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">Même routeur, interface GE0/1. Sous-interfaces GE0/1.10 et GE0/1.20 avec les mêmes IPs. Les pools DHCP sont déjà créés — PC4 et PC5 reçoivent automatiquement leur IP.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#4a5a72">! Sous-interface VLAN 100 — SISR</span>
+<span style="color:#10b981">interface gigabitEthernet 0/1.10</span>
+<span style="color:#60a5fa"> encapsulation dot1Q 100</span>
+<span style="color:#60a5fa"> ip address 192.168.10.1 255.255.255.0</span>
+<span style="color:#60a5fa"> no shutdown</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! Sous-interface VLAN 200 — SLAM</span>
+<span style="color:#10b981">interface gigabitEthernet 0/1.20</span>
+<span style="color:#60a5fa"> encapsulation dot1Q 200</span>
+<span style="color:#60a5fa"> ip address 192.168.20.1 255.255.255.0</span>
+<span style="color:#60a5fa"> no shutdown</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vérification -->
+      <div style="border:1px solid rgba(245,158,11,0.15);border-radius:10px;overflow:hidden">
+        <div style="padding:12px 18px;background:rgba(245,158,11,0.06);display:flex;align-items:center;gap:10px">
+          <span style="width:22px;height:22px;border-radius:50%;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#f59e0b;flex-shrink:0">✓</span>
+          <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Vérification</span>
+        </div>
+        <div style="padding:16px 18px">
+          <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#4a5a72">! Vérifier les IPs distribuées par DHCP</span>
+<span style="color:#10b981">show ip dhcp binding</span>
+
+<span style="color:#4a5a72">! PC SISR → ping passerelle SISR</span>
+<span style="color:#60a5fa">ping 192.168.10.1</span>   <span style="color:#10b981">→ OK ✓</span>
+
+<span style="color:#4a5a72">! PC SLAM → ping passerelle SLAM</span>
+<span style="color:#60a5fa">ping 192.168.20.1</span>   <span style="color:#10b981">→ OK ✓</span>
+
+<span style="color:#4a5a72">! PC SISR → ping PC SLAM (inter-VLAN désactivé)</span>
+<span style="color:#60a5fa">ping 192.168.20.x</span>   <span style="color:#f59e0b">→ Échec attendu ✓</span></pre>
+        </div>
+      </div>
+
+      <!-- Résultat attendu -->
+      <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.18);border-radius:10px;padding:20px">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#10b981;font-weight:600;margin-bottom:12px">✅ Résultat attendu</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;padding:8px 12px;background:rgba(59,130,246,0.05);border-left:3px solid rgba(59,130,246,0.4);border-radius:4px">
+            <strong style="color:#60a5fa">VLAN 100 — SISR</strong> · PC0, PC1 (Infra 1) et PC4 (Infra 2) → IP dans <code style="background:rgba(59,130,246,0.1);padding:1px 5px;border-radius:3px;color:#60a5fa">192.168.10.2 – 192.168.10.254</code> · Passerelle 192.168.10.1
+          </div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;padding:8px 12px;background:rgba(16,185,129,0.05);border-left:3px solid rgba(16,185,129,0.4);border-radius:4px">
+            <strong style="color:#10b981">VLAN 200 — SLAM</strong> · PC2, PC3 (Infra 1) et PC5 (Infra 2) → IP dans <code style="background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;color:#10b981">192.168.20.2 – 192.168.20.254</code> · Passerelle 192.168.20.1
+          </div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;padding:8px 12px;background:rgba(245,158,11,0.05);border-left:3px solid rgba(245,158,11,0.4);border-radius:4px">
+            <strong style="color:#f59e0b">Inter-VLAN désactivé</strong> · Ping SISR → SLAM en échec — isolation confirmée sur les deux infrastructures
+          </div>
+        </div>
+      </div>
+
+     
+  <!-- MODALE TP CISCO — DM Admin -->
+<div id="ciscoModal2" style="display:none;position:fixed;inset:0;z-index:4000;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);overflow-y:auto" onclick="if(event.target===this)closeCiscoModal2()">
+  <div style="max-width:900px;margin:40px auto;background:#0c1120;border:1px solid rgba(59,130,246,0.25);border-radius:16px;overflow:hidden">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#0a0f1e;border-bottom:1px solid rgba(255,255,255,0.07)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#60a5fa">SISR</span>
+        <span style="color:rgba(255,255,255,0.15)">·</span>
+        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;color:#dde4f0;font-weight:600">Cisco Packet Tracer </span>
+      </div>
+      <button onclick="closeCiscoModal2()" style="background:none;border:none;color:#7e90ad;font-size:1.2rem;cursor:pointer;padding:4px 8px">✕</button>
+    </div>
+
+    <div style="padding:32px 28px;display:flex;flex-direction:column;gap:28px">
+
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#7e90ad;line-height:1.7;margin:0">
+        Deux réseaux reliés par Router1 qui assure le routage entre eux. Réseau gauche
+        <code style="background:rgba(59,130,246,0.1);padding:2px 6px;border-radius:4px;color:#60a5fa">192.168.10.0/24</code>
+        — Router0 + Switch0 (PC0, PC1, Server0). Réseau droit
+        <code style="background:rgba(16,185,129,0.1);padding:2px 6px;border-radius:4px;color:#10b981">192.168.20.0/24</code>
+        — Router1 + Switch1 (PC2, PC3, PC4, Server1). Les PC des deux réseaux peuvent se pinguer.
+      </p>
+
+      <!-- Topologie -->
+      <div style="background:rgba(8,12,20,.8);border:1px solid rgba(59,130,246,0.15);border-radius:10px;padding:20px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#60a5fa;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Topologie</div>
+        <pre style="margin:0;font-family:'JetBrains Mono',monospace;font-size:.82rem;color:#dde4f0;line-height:2.2">
+  [Router0]——[Switch0]————[Router1]————[Switch1]
+               /    \      /      \     /  |   \   \
+           [PC0] [PC1] [GE0/0] [GE0/1][PC2][PC3][PC4][Server1]
+             |
+         [Server0]
+
+   192.168.10.0/24   ←— routage —→   192.168.20.0/24
+   GE0/0 → 10.1    Router1 : 10.2/20.1   GE0/1 → 20.1</pre>
+        <div style="margin-top:14px;display:flex;gap:20px;flex-wrap:wrap">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#60a5fa">● Gauche — Router0 + Switch0 — PC0, PC1, Server0</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#10b981">● Droit — Router1 + Switch1 — PC2, PC3, PC4, Server1</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:600;color:#dde4f0;letter-spacing:.5px;text-transform:uppercase">Déroulé du TP</div>
+
+        <!-- Étape 1 Switch0 -->
+        <div style="border:1px solid rgba(59,130,246,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(59,130,246,0.07);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.4);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#60a5fa;flex-shrink:0">1</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Switch0 — réseau gauche 192.168.10.0</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">Création du VLAN 10, affectation de PC0, PC1, Server0 en mode access. Port vers Router0 en trunk.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#4a5a72">! Création VLAN gauche</span>
+<span style="color:#10b981">vlan 10</span>
+<span style="color:#60a5fa"> name VLAN_GAUCHE</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! PC0 → fa0/1</span>
+<span style="color:#10b981">interface fastEthernet 0/1</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 10</span>
+
+<span style="color:#4a5a72">! PC1 → fa0/2</span>
+<span style="color:#10b981">interface fastEthernet 0/2</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 10</span>
+
+<span style="color:#4a5a72">! Server0 → fa0/3</span>
+<span style="color:#10b981">interface fastEthernet 0/3</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 10</span>
+
+<span style="color:#4a5a72">! Port trunk vers Router0</span>
+<span style="color:#10b981">interface gigabitEthernet 0/1</span>
+<span style="color:#60a5fa"> switchport mode trunk</span>
+
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+
+        <!-- Étape 2 Switch1 -->
+        <div style="border:1px solid rgba(16,185,129,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(16,185,129,0.06);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.35);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#10b981;flex-shrink:0">2</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Switch1 — réseau droit 192.168.20.0</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">Création du VLAN 20, affectation de PC2, PC3, PC4 et Server1 en mode access. Port vers Router1 en trunk.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#4a5a72">! Création VLAN droit</span>
+<span style="color:#10b981">vlan 20</span>
+<span style="color:#60a5fa"> name VLAN_DROIT</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! PC2 → fa0/1</span>
+<span style="color:#10b981">interface fastEthernet 0/1</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 20</span>
+
+<span style="color:#4a5a72">! PC3 → fa0/2</span>
+<span style="color:#10b981">interface fastEthernet 0/2</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 20</span>
+
+<span style="color:#4a5a72">! PC4 → fa0/3</span>
+<span style="color:#10b981">interface fastEthernet 0/3</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 20</span>
+
+<span style="color:#4a5a72">! Server1 → fa0/4</span>
+<span style="color:#10b981">interface fastEthernet 0/4</span>
+<span style="color:#60a5fa"> switchport mode access</span>
+<span style="color:#60a5fa"> switchport access vlan 20</span>
+
+<span style="color:#4a5a72">! Port trunk vers Router1</span>
+<span style="color:#10b981">interface gigabitEthernet 0/1</span>
+<span style="color:#60a5fa"> switchport mode trunk</span>
+
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+
+        <!-- Étape 3 Routeurs -->
+        <div style="border:1px solid rgba(59,130,246,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(59,130,246,0.07);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.4);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#60a5fa;flex-shrink:0">3</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Router0 et Router1 — routage entre les deux réseaux</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">Router0 est la passerelle du réseau gauche. Router1 est connecté aux deux réseaux — il a une interface dans chaque réseau et assure le routage entre eux.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#4a5a72">! ── Router0 — passerelle réseau gauche ──</span>
+<span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#10b981">interface gigabitEthernet 0/0</span>
+<span style="color:#60a5fa"> ip address 192.168.10.1 255.255.255.0</span>
+<span style="color:#60a5fa"> no shutdown</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! Route statique vers réseau droit via Router1</span>
+<span style="color:#10b981">ip route 192.168.20.0 255.255.255.0 192.168.10.2</span>
+
+<span style="color:#10b981">write memory</span>
+
+<span style="color:#4a5a72">! ── Router1 — interconnexion des deux réseaux ──</span>
+<span style="color:#10b981">enable</span>
+<span style="color:#10b981">configure terminal</span>
+
+<span style="color:#4a5a72">! Interface côté réseau gauche</span>
+<span style="color:#10b981">interface gigabitEthernet 0/0</span>
+<span style="color:#60a5fa"> ip address 192.168.10.2 255.255.255.0</span>
+<span style="color:#60a5fa"> no shutdown</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! Interface côté réseau droit</span>
+<span style="color:#10b981">interface gigabitEthernet 0/1</span>
+<span style="color:#60a5fa"> ip address 192.168.20.1 255.255.255.0</span>
+<span style="color:#60a5fa"> no shutdown</span>
+<span style="color:#10b981">exit</span>
+
+<span style="color:#4a5a72">! Route statique vers réseau gauche</span>
+<span style="color:#10b981">ip route 192.168.10.0 255.255.255.0 192.168.10.1</span>
+
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+
+        <!-- Étape 4 DHCP -->
+        <div style="border:1px solid rgba(16,185,129,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(16,185,129,0.06);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.35);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#10b981;flex-shrink:0">4</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">DHCP — distribution automatique des IPs</span>
+          </div>
+          <div style="padding:16px 18px">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;margin:0 0 12px 0">Chaque routeur distribue les IPs de son réseau. Router0 gère le réseau gauche, Router1 le réseau droit.</p>
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#4a5a72">! ── Router0 — DHCP réseau gauche ──</span>
+<span style="color:#10b981">ip dhcp excluded-address 192.168.10.1</span>
+<span style="color:#10b981">ip dhcp excluded-address 192.168.10.2</span>
+
+<span style="color:#10b981">ip dhcp pool VLAN_GAUCHE</span>
+<span style="color:#60a5fa"> network 192.168.10.0 255.255.255.0</span>
+<span style="color:#60a5fa"> default-router 192.168.10.1</span>
+<span style="color:#60a5fa"> dns-server 8.8.8.8</span>
+<span style="color:#10b981">exit</span>
+<span style="color:#10b981">write memory</span>
+
+<span style="color:#4a5a72">! ── Router1 — DHCP réseau droit ──</span>
+<span style="color:#10b981">ip dhcp excluded-address 192.168.20.1</span>
+
+<span style="color:#10b981">ip dhcp pool VLAN_DROIT</span>
+<span style="color:#60a5fa"> network 192.168.20.0 255.255.255.0</span>
+<span style="color:#60a5fa"> default-router 192.168.20.1</span>
+<span style="color:#60a5fa"> dns-server 8.8.8.8</span>
+<span style="color:#10b981">exit</span>
+<span style="color:#10b981">write memory</span></pre>
+          </div>
+        </div>
+
+        <!-- Étape 5 Vérification -->
+        <div style="border:1px solid rgba(245,158,11,0.15);border-radius:10px;overflow:hidden">
+          <div style="padding:12px 18px;background:rgba(245,158,11,0.06);display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#f59e0b;flex-shrink:0">5</span>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#dde4f0;font-weight:600">Vérification et tests</span>
+          </div>
+          <div style="padding:16px 18px">
+            <pre style="margin:0;background:rgba(4,8,16,.9);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:14px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#dde4f0;overflow-x:auto;line-height:1.9"><span style="color:#4a5a72">! Vérifier les IPs distribuées</span>
+<span style="color:#10b981">show ip dhcp binding</span>
+
+<span style="color:#4a5a72">! PC gauche → ping passerelle gauche</span>
+<span style="color:#60a5fa">ping 192.168.10.1</span>   <span style="color:#10b981">→ OK ✓</span>
+
+<span style="color:#4a5a72">! PC droit → ping passerelle droite</span>
+<span style="color:#60a5fa">ping 192.168.20.1</span>   <span style="color:#10b981">→ OK ✓</span>
+
+<span style="color:#4a5a72">! PC gauche → ping PC droit (routage inter-réseau)</span>
+<span style="color:#60a5fa">ping 192.168.20.x</span>   <span style="color:#10b981">→ OK ✓</span>
+
+<span style="color:#4a5a72">! PC droit → ping PC gauche</span>
+<span style="color:#60a5fa">ping 192.168.10.x</span>   <span style="color:#10b981">→ OK ✓</span></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Résultat -->
+      <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.18);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px">
+        <span style="font-size:1.4rem">✅</span>
+        <div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#10b981;font-weight:600;margin-bottom:4px">Résultat attendu</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:#7e90ad;line-height:1.6">
+            PC0/PC1 → IP dans <code style="background:rgba(59,130,246,0.1);padding:1px 5px;border-radius:3px;color:#60a5fa">192.168.10.3–254</code> ·
+            PC2/PC3/PC4 → IP dans <code style="background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;color:#10b981">192.168.20.2–254</code> ·
+            Ping passerelle OK · Ping inter-réseau
+            <code style="background:rgba(16,185,129,0.1);padding:1px 5px;border-radius:3px;color:#10b981">OK dans les deux sens</code> — routage confirmé.
+          </div>
+        </div>
+      </div>
+
+     
+
+    </div>
+  </div>
+</div>
+  </main>
+
+  <!-- MODALE PDF -->
+  <div class="pdf-modal" id="pdfModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="pdf-modal__overlay" id="pdfModalOverlay"></div>
+    <div class="pdf-modal__panel">
+      <div class="pdf-modal__bar">
+        <span class="pdf-modal__title" id="pdfModalTitle"></span>
+        <div class="pdf-modal__actions">
+          <a class="btn btn--outline btn--sm" id="pdfModalDownload" href="#" download target="_blank">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Télécharger
+          </a>
+          <button class="pdf-modal__close" id="pdfModalClose" aria-label="Fermer">✕</button>
+        </div>
+      </div>
+            <iframe class="pdf-modal__frame" id="pdfModalFrame" src="" title="Documentation"></iframe>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+  <script src="anim.js"></script>
+</body>
+</html>
