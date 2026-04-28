@@ -129,9 +129,9 @@ function getOrCreateWip() {
   }
   return wip;
 }
-
 function openPdf(src, title) {
   pdfTitle.textContent = title || src;
+  pdfModal.style.zIndex = "6000";
   pdfModal.classList.add("is-open");
   pdfModal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
@@ -204,4 +204,14 @@ function showInfra(n) {
     t2.style.background = 'rgba(16,185,129,0.12)'; t2.style.borderColor = 'rgba(16,185,129,0.4)'; t2.style.color = '#10b981';
     t1.style.background = 'rgba(255,255,255,0.03)'; t1.style.borderColor = 'rgba(255,255,255,0.1)'; t1.style.color = '#7e90ad';
   }
+}
+
+
+function openHackathonModal() {
+  document.getElementById('hackathonModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeHackathonModal() {
+  document.getElementById('hackathonModal').style.display = 'none';
+  document.body.style.overflow = '';
 }

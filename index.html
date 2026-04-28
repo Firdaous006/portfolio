@@ -260,8 +260,10 @@
 </button>
       </div>
     </div>
-
   </div>
+
+
+  
 </section>
     <!-- PROJETS -->
     <section class="section" id="projects">
@@ -578,7 +580,7 @@
                   <li>Mise en place d'un environnement de veille et d'apprentissage personnel</li>
                 </ul>
                 <div class="proj-tools"><span class="proj-tools__label">Outils</span><div class="proj-tools__list"><span>GLPI</span><span>VirtualBox</span><span>Trello</span><span>HTML/CSS</span><span>API REST</span><span>Notion</span></div></div>
-               <button class="btn btn--outline btn--sm proj-doc-btn" type="button" data-pdf="assets/Hackathon_wip" data-title="Hackathon BTS SIO — Documentation"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
+               <button class="btn btn--outline btn--sm" type="button" onclick="openHackathonModal()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Documentation</button>
             </article>
 
           </div>
@@ -590,7 +592,7 @@
     <!-- EXPÉRIENCE -->
     <section class="section" id="experience">
       <div class="container">
-        <div class="sec-head reveal"><h2>Expérience</h2><span class="sec-line"></span></div>
+        <div class="sec-head reveal"><h2>Expériences</h2><span class="sec-line"></span></div>
         <div class="timeline">
 
           <div class="tl-item reveal">
@@ -932,6 +934,78 @@ VLAN100 VLAN100 VLAN200 VLAN200  |         |              VLAN100  VLAN200
      
   
   </main>
+
+
+  <!-- MODALE HACKATHON — Documentations -->
+<div id="hackathonModal" style="display:none;position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);overflow-y:auto" onclick="if(event.target===this)closeHackathonModal()">
+  <div style="max-width:900px;margin:40px auto;background:#0c1120;border:1px solid rgba(59,130,246,0.25);border-radius:16px;overflow:hidden">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#0a0f1e;border-bottom:1px solid rgba(255,255,255,0.07)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#f59e0b">BTS SIO</span>
+        <span style="color:rgba(255,255,255,0.15)">·</span>
+        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;color:#dde4f0;font-weight:600">Hackathon — Documentations des compétences</span>
+      </div>
+      <button onclick="closeHackathonModal()" style="background:none;border:none;color:#7e90ad;font-size:1.2rem;cursor:pointer;padding:4px 8px">✕</button>
+    </div>
+
+    <div style="padding:32px 28px;display:flex;flex-direction:column;gap:20px">
+
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;color:#7e90ad;line-height:1.7;margin:0">
+        Comptes rendus des sous-compétences mobilisées durant le Hackathon BTS SIO — référentiel RNCP 40792.
+      </p>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+
+        <button onclick="openPdf('assets/Documentation C1.pdf','Documentation C1 — Gérer le patrimoine informatique')"
+          style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 16px;cursor:pointer;text-align:left;transition:border-color .2s,transform .2s"
+          onmouseover="this.style.borderColor='rgba(59,130,246,0.4)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateY(0)'">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#ffffff;font-weight:700">C1</span>
+          <span style="font-size:.85rem;color:#dde4f0;line-height:1.4">Recensement et identification des ressources numériques</span>
+          <span style="font-size:.75rem;color:#60a5fa;margin-top:4px">Ouvrir le PDF →</span>
+        </button>
+
+        <button onclick="openPdf('assets/Documentation C7.pdf','Documentation C7 — Répondre aux incidents et demandes')"
+          style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 16px;cursor:pointer;text-align:left;transition:border-color .2s,transform .2s"
+          onmouseover="this.style.borderColor='rgba(59,130,246,0.4)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateY(0)'">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#ffffff;font-weight:700">C7</span>
+          <span style="font-size:.85rem;color:#dde4f0;line-height:1.4">Collecte, suivi et orientation des demandes</span>
+          <span style="font-size:.75rem;color:#60a5fa;margin-top:4px">Ouvrir le PDF →</span>
+        </button>
+
+        <button onclick="openPdf('assets/Documentation C11.pdf','Documentation C11 — Développer la présence en ligne')"
+          style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 16px;cursor:pointer;text-align:left;transition:border-color .2s,transform .2s"
+          onmouseover="this.style.borderColor='rgba(59,130,246,0.4)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateY(0)'">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#ffffff;font-weight:700">C11</span>
+          <span style="font-size:.85rem;color:#dde4f0;line-height:1.4">Référencement des services en ligne et mesure de leur visibilité</span>
+          <span style="font-size:.75rem;color:#60a5fa;margin-top:4px">Ouvrir le PDF →</span>
+        </button>
+
+        <button onclick="openPdf('assets/Documentation C14.pdf','Documentation C14 — Travailler en mode projet')"
+          style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 16px;cursor:pointer;text-align:left;transition:border-color .2s,transform .2s"
+          onmouseover="this.style.borderColor='rgba(59,130,246,0.4)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateY(0)'">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#ffffff;font-weight:700">C14</span>
+          <span style="font-size:.85rem;color:#dde4f0;line-height:1.4">Planification des activités</span>
+          <span style="font-size:.75rem;color:#60a5fa;margin-top:4px">Ouvrir le PDF →</span>
+        </button>
+
+        <button onclick="openPdf('assets/Documentation C17.pdf','Documentation C17 — Mettre à disposition des services IT')"
+          style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 16px;cursor:pointer;text-align:left;transition:border-color .2s,transform .2s"
+          onmouseover="this.style.borderColor='rgba(59,130,246,0.4)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.transform='translateY(0)'">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#ffffff;font-weight:700">C17</span>
+          <span style="font-size:.85rem;color:#dde4f0;line-height:1.4">Déploiement d'un service</span>
+          <span style="font-size:.75rem;color:#60a5fa;margin-top:4px">Ouvrir le PDF →</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- MODALE TP CISCO — DM Admin -->
 <div id="ciscoModal2" style="display:none;position:fixed;inset:0;z-index:4000;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px);overflow-y:auto" onclick="if(event.target===this)closeCiscoModal2()">
