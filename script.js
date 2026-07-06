@@ -169,7 +169,7 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && pdfModal.c
 safe(() => {
   const cvBtn = document.getElementById("openCvBtn");
   if (!cvBtn) return;
-  cvBtn.addEventListener("click", () => openPdf("assets/Cv stage.pdf", "CV — Firdaous Amadou"));
+  cvBtn.addEventListener("click", () => openPdf("assets/CV alternance.pdf", "CV — Firdaous Amadou"));
 });
 
 function openCiscoModal2() {
